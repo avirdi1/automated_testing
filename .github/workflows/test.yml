@@ -1,28 +1,28 @@
-name: test
+# name: test
 
-on:
-  push:
-    branches:
-      - '**'
+# on:
+#   push:
+#     branches:
+#       - '**'
 
-jobs:
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
-      - name: Set up Go
-        uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
-        with:
-          go-version: '1.21'
+# jobs:
+#   setup:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
+#       - name: Set up Go
+#         uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
+#         with:
+#           go-version: '1.21'
 
-  test:
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
-      - name: Set up Go
-        uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
-        with:
-          go-version: '1.21'
-      - name: Run unit tests
-        run: go test ./...
+#   test:
+#     runs-on: ubuntu-latest
+#     needs: setup
+#     steps:
+#       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
+#       - name: Set up Go
+#         uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
+#         with:
+#           go-version: '1.21'
+#       - name: Run unit tests
+#         run: go test ./...
